@@ -23,6 +23,7 @@ def main():
     if flask.request.method == "POST":
         customer_id = flask.request.form["customer_id"]
         customer_id = int(customer_id)
+
         recommendedProducts = customer_recomendation(customer_id)
 
         return flask.render_template(
